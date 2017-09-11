@@ -5,7 +5,7 @@ const cors = require('cors')
 const server = express()
 
 server.use(cors())
-server.use(apiHandler)
+server.use('/graphql', apiHandler)
 
 server.listen(3002, err => {
   if (err) throw err
